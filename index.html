@@ -17,6 +17,7 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header class="bg-green-700 h-24 flex justify-around items-center">
@@ -57,16 +58,23 @@
   
   <h1 class="flex justify-center font-bold text-4xl pt-8">Choose Your Trees</h1>
   <div class="grid grid-cols-12 justify-around gap-4 mx-8">
+    
   <div class="col-span-2"><h1 class="font-bold">Category</h1><ul id="categories-section"></ul></div>
-  <div class="grid col-span-8 grid-cols-3 gap-24 p-4 my-4" id="card-container">
-  
+    <span class="loading loading-spinner text-neutral flex justify-center" id="loader"></span>
 
+  <div class="grid col-span-8 lg:grid-cols-3 sm:grid-cols-1 gap-24 p-4 my-4" id="card-container">
 
+<div id="loader" class="hidden col-span-3 text-center py-10">
+  <span class="loading loading-spinner loading-lg text-green-600"></span>
+</div>
      
       
       </div>
-  <div class="col-span-2"><h1 class="font-bold">Your Cart</h1></div>
+      <div class="flex justify-around font-bold">
+  <div class="col-span-2" id="cart-container"><h1 class="font-bold">Your Cart</h1></div> <div><span id="total"></span></div>
+</div>
   </div>
+   
 </section>
 
       <section>
